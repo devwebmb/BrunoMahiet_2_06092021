@@ -1,0 +1,214 @@
+/*summary*/
+
+/*fonts*/
+
+/*colors
+bleu                #0065FC
+bleu plus clair     #DEEBFF
+fond gris           #F2F2F2 */
+
+/*Propriétés CSS sur l'ensemble du document*/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Raleway',sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    padding: 20px;
+}
+
+/*propriété CSS sur le body*/
+
+/****************/
+/*VERSION MOBILE*/
+/****************/
+
+/********/
+/*header*/
+/********/
+
+header {
+    position: relative;
+}
+
+#logo-entreprise {
+    margin: 20px 0 25px 20px;
+}
+
+#li-inscrire {
+    color: #0065FC;
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+
+#menu-mobile {
+    display: flex;
+    width: 100%;
+}
+
+#menu-mobile li {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#menu-mobile li {
+    border-bottom: solid 5px #f2f2f2;
+}
+
+#menu-mobile li:hover {
+    border-bottom: solid #0065FC 5px;
+}
+
+#menu-mobile li a:hover {
+    color: #0065FC;
+}
+
+/*lien hébergements en bleu démarrage page*/
+#menu-mobile > li:nth-child(1) > a {
+    color: #0065FC;
+}
+
+#menu-mobile > li:nth-child(1) {
+    border-bottom: #0065FC solid 5px;
+}
+
+/***********************************/
+/*section recherche choix de ville*/
+/***********************************/
+
+/*Titre et pargraphe*/
+
+#search h3 {
+    padding-bottom: 10px;
+}
+
+#search div:nth-child(1) p {
+    padding-bottom: 10px;
+}
+
+/*barre de recherche*/
+
+
+#search-input {
+    padding: 10px 0;
+    display: flex;
+}
+
+#map-marker {
+    background-color: #f2f2f2;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 15px 0 0 15px;
+}
+
+#map-marker::before {
+    position: absolute;
+    left: 19px;
+    top: 17px;
+}
+
+#city-choice {
+   border-left: none;
+   border-right: none;
+   border-top: 1px solid #f2f2f2;
+   border-bottom: 1px solid #f2f2f2;
+   width: 180px;
+}
+
+#city-choice::placeholder {
+    font-weight: bold;
+    color: black;
+    padding-left: 8px;
+}
+
+#search div:nth-child(2) button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #0065FC;
+    border-radius: 15px;
+    transform: translateX(-25px);
+}
+
+#search div:nth-child(2) button i {
+    color: white;
+}
+
+/*partie filtres*/
+
+#filter h4 {
+    padding: 10px 0 15px 0;
+}
+
+.choice a{
+    display: flex;
+}
+
+.choice a p {
+    margin: auto 0;
+    align-items: center;
+    justify-content: flex-start;
+    border: solid #f2f2f2 2.5px;
+    padding: 13px 15px 13px 35px;
+    border-left: none;
+    transform: translateX(-25px);
+    border-radius: 0 25px 25px 0;
+    margin-bottom: 10px;
+    z-index: 0;
+    font-weight: bold;
+}
+
+#icone {
+    color: #0065FC;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #deebff;
+    display: flex;
+    z-index: 1;
+}
+
+#icone::before {
+    align-items: center;
+    margin: auto;
+}
+
+/*mise en place par grid des choix*/
+
+#options {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'a b'
+    'c c'
+    'd d';
+}
+
+#options div:nth-child(1)  {
+    grid-area: a;
+}
+
+#options div:nth-child(2)  {
+    grid-area: b;
+}
+
+#options div:nth-child(3) {
+    grid-area: c;
+}
+
+#options div:nth-child(4)  {
+    grid-area: d;
+}
