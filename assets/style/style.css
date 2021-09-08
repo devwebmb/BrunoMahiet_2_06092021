@@ -22,10 +22,6 @@ a {
     color: black;
 }
 
-section {
-    padding: 20px;
-}
-
 /*propriété CSS sur le body*/
 
 /****************/
@@ -87,7 +83,11 @@ header {
 /*section recherche choix de ville*/
 /***********************************/
 
-/*Titre et pargraphe*/
+#search {
+    padding: 30px 20px 20px 20px;
+}
+
+/*Titre et paragraphe*/
 
 #search h3 {
     padding-bottom: 10px;
@@ -125,12 +125,12 @@ header {
    border-top: 1px solid #f2f2f2;
    border-bottom: 1px solid #f2f2f2;
    width: 180px;
+   padding-left: 8px;
 }
 
 #city-choice::placeholder {
     font-weight: bold;
     color: black;
-    padding-left: 8px;
 }
 
 #search div:nth-child(2) button {
@@ -160,14 +160,15 @@ header {
     margin: auto 0;
     align-items: center;
     justify-content: flex-start;
-    border: solid #f2f2f2 2.5px;
-    padding: 13px 15px 13px 35px;
+    border: solid #f2f2f2 3.5px;
+    padding: 12.5px 15px 12.5px 35px;
     border-left: none;
     transform: translateX(-25px);
     border-radius: 0 25px 25px 0;
     margin-bottom: 10px;
     z-index: 0;
     font-weight: bold;
+    height: 50px;
 }
 
 #icone {
@@ -185,30 +186,103 @@ header {
     margin: auto;
 }
 
-/*mise en place par grid des choix*/
+#flex-options {
+    display: flex;
+}
 
-#options {
+#search div:nth-child(4) {
+    display: flex;
+    margin-top: 15px;
+}
+
+#search div:nth-child(4) i {
+    color: #0065FC;
+    width: 25px;
+    height: 25px;
+    border: #f2f2f2 solid 1px;
+    border-radius: 12.5px;
+}
+
+#search div:nth-child(4) div {
+    position: relative;
+}
+
+#search div:nth-child(4) i::before {
+    font-size: 12px;
+    left: 10.25px;
+    top: 6.5px;
+    position: absolute;
+}
+
+#search div:nth-child(4) p {
+    padding: 5px 0 0 10px;
+}
+
+
+/**************************************/
+/*SECTION HEBERGEMENTS*/
+/**************************************/
+
+#hebergements {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#populaires {
+    background-color: #f2f2f2;
+    padding: 30px 20px 30px 20px;
+}
+
+/*titre les plus populaires*/
+
+#populaires-titre {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 100%;
+}
+
+#populaires  div  i {
+    display: flex;
+    align-items: center;
+}
+
+/*articles les plus populaires*/
+
+#populaires article {
+    background-color: white;
+    border-radius: 25px;
+}
+
+#populaires article a {
+    display: flex;
+    width: 100%;
+}
+
+.populaires-img {
+    width: 40%;
+    height: 150px;
+}
+
+.populaires-img img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 25px 0 0 25px;
+    padding: 5px 0 5px 5px;
+}
+
+.populaires-texte {
+    width: 60%;
+    height: 150px;
+    padding: 15px 15px 5px 15px;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    'a b'
-    'c c'
-    'd d';
 }
 
-#options div:nth-child(1)  {
-    grid-area: a;
+.stars {
+    display: flex;
 }
 
-#options div:nth-child(2)  {
-    grid-area: b;
-}
-
-#options div:nth-child(3) {
-    grid-area: c;
-}
-
-#options div:nth-child(4)  {
-    grid-area: d;
+.blue {
+    color: #0065FC;
 }
