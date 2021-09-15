@@ -370,12 +370,14 @@ ul li:nth-child(1) {
 /* texte article hebergements */
 
 .hebergements-texte {
-  padding: 10px 0 10px 15px;
+  padding: 10px 15px 10px 15px;
 }
 .hebergements-texte h4,
 .hebergements-texte p {
   padding-bottom: 10px;
 }
+
+
 
 /* lien afficher plus */
 
@@ -459,7 +461,7 @@ footer h4 {
 
 /*Version tablette*/
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1229px) {
   /*section search*/
   #options {
     display: flex;
@@ -478,9 +480,10 @@ footer h4 {
   }
 
   #marseille-hebergements,
-  #populaires {
+  #marseille-populaires {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
   }
 
@@ -527,14 +530,19 @@ footer h4 {
   }
 }
 
+/*****************/
 /*version desktop*/
+/******************/
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   header,
   section {
     padding: 0 2%;
   }
 
+  body {
+      font-size:1.3rem;
+  }
   /************/
   /*header*/
   /*************/
@@ -611,6 +619,10 @@ footer h4 {
 
   /*barre de recherche ville*/
 
+  #search {
+    padding: 0 2% 2% 2%;
+  }
+
   #search-button {
     width: 120px;
     border-radius: 0 25px 25px 0;
@@ -660,5 +672,156 @@ footer h4 {
       flex-direction: row;
       width: 100%;
       justify-content: space-between;
+  }
+
+  /*hebergements*/
+
+  #partie-hebergements {
+      width: 66%;
+      border-radius: 25px;
+      padding: 2%;
+  }
+
+  #marseille-hebergements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+  }
+
+  #marseille-hebergements article {
+    width: 90%;
+    margin-bottom: 8%;
+  }
+
+  .hebergements-texte h4 {
+    height: 60px;
+  }
+
+  @media screen and (min-width : 1460px){
+    .hebergements-texte h4 {
+      height: 40px;
+    }
+  }
+
+  /*populaires*/
+
+  #populaires {
+    width: 32%;
+    border-radius: 25px;
+    padding: 2%;
+  }
+
+  #marseille-populaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    padding-bottom: 15%;
+  }
+
+  #marseille-populaires article, #marseille-populaires a {
+    height: 200px;
+  }
+
+  .populaires-img, .populaires-img img, .populaires-texte {
+    height: 200px;
+  }
+
+  .populaires-texte {
+    grid-template-rows: 45% 35% 20%;
+  }
+
+  .stars {
+    align-items: flex-end;
+    padding-bottom: 10px;
+  }
+
+  /****************************/
+  /*ACTIVITES*/
+  /******************************/
+
+  #activites {
+    background-color: white;
+    padding: 2%;
+  }
+
+  #marseille-activites {
+    width: 100%;
+    max-height: 600px;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    justify-content: space-between;
+    grid-template-rows: 1fr 1fr 35px 1fr 35px 1fr 1fr;
+    grid-template-areas:  
+    "a1 a2 a4 a5"
+    "a1 a2 a4 a5"
+    "a1 a2 a4  ."
+    "a1 a2 a4 a6"
+    "a1  . a4 a6"
+    "a1 a3 a4 a6"
+    "a1 a3 a4 a6";
+  }
+
+  #marseille-activites article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  .img-activites {
+    height: 100%;
+    border: none;
+  }
+
+  .img-activites img {
+    height: 95%;
+  }
+
+  .texte-activites {
+    height: 80px;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    border: 2px solid #f2f2f2;
+    border-top: none;
+    border-radius: 0 0 25px 25px;
+    box-shadow: #f2f2f2 -1px 1px 10px;
+    box-shadow: 1px 0 10px #f2f2f2;
+  }
+
+  .a1 {
+    grid-area: a1;
+  } 
+
+  .a2 {
+    grid-area: a2;
+  }
+
+  .a3 {
+    grid-area: a3;
+  }
+
+  .a4 {
+    grid-area: a4;
+  }
+
+  .a5 {
+    grid-area: a5;
+  }
+
+  .a6 {
+    grid-area: a6;
+  }
+
+  /***********************/
+  /*FOOTER*/
+  /***********************/
+
+  footer div {
+    padding-top: 25px;
   }
 }
