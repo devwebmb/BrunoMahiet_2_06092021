@@ -20,7 +20,7 @@ fond gris           #F2F2F2 */
 }
 
 body {
-  max-width: 1600px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -38,10 +38,13 @@ a {
 }
 
 .grey {
-  color: #f2f2f2be;
+  color: rgba(0, 0, 0, 0.109);
 }
 
-/*propriété CSS sur le body*/
+article {
+  box-shadow: 0.3px 0.5px 1px rgba(0, 0, 0, 0.05),
+              2px 4px 8px rgba(0, 0, 0, 0.1) ;
+}
 
 /****************/
 /*VERSION MOBILE*/
@@ -90,13 +93,13 @@ ul li a:hover {
 }
 
 /*lien hébergements en bleu démarrage page*/
-ul li:nth-child(1) a {
+/*ul li:nth-child(1) a {
   color: #0065fc;
 }
 
 ul li:nth-child(1) {
   border-bottom: #0065fc solid 5px;
-}
+}*/
 
 /***********************************/
 /*section recherche choix de ville*/
@@ -189,17 +192,9 @@ ul li:nth-child(1) {
   display: flex;
 }
 
-.choice p:hover {
-  color: #0065fc;
-  background-color: #deebff;
-}
-
 .choice a p {
-  margin: auto 0;
-  align-items: center;
-  justify-content: flex-start;
   border: solid #f2f2f2 3.5px;
-  padding: 12.5px 15px 12.5px 35px;
+  padding: 9.5px 15px 9.5px 35px;
   border-left: none;
   transform: translateX(-25px);
   border-radius: 0 25px 25px 0;
@@ -236,27 +231,31 @@ ul li:nth-child(1) {
   margin-top: 15px;
 }
 
-#inf-icone i {
-  color: #0065fc;
-  width: 25px;
-  height: 25px;
-  border: #f2f2f2 solid 1px;
-  border-radius: 12.5px;
-}
-
-#inf-icone div {
-  position: relative;
-}
-
 #inf-icone i::before {
-  font-size: 12px;
-  left: 10.25px;
-  top: 6.5px;
-  position: absolute;
+  font-size: 0.8rem;
+  text-align:center;
+}
+
+.icone-i {
+  color: #0065fc;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  border: #f2f2f2 solid 1px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#inf-icone div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30px;
 }
 
 #inf-icone p {
-  padding: 5px 0 0 10px;
+  padding-left: 15px;
 }
 
 /**************************************/
@@ -336,7 +335,6 @@ ul li:nth-child(1) {
 #partie-hebergements article {
   background-color: white;
   max-width: 400px;
-  margin: a;
 }
 
 /*titre de la partie hebergements */
@@ -371,7 +369,7 @@ ul li:nth-child(1) {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  border-radius: 25px;
+  border-radius: 25px 25px 0 0 ;
   padding: 5px 5px 0 5px;
 }
 
@@ -601,7 +599,7 @@ footer h4 {
     vertical-align: middle;
   }
 
-  body header nav div ul li:nth-child(1) {
+  /*body header nav div ul li:nth-child(1) {
     border-bottom: none;
     border-top: solid 5px #0065fc;
   }
@@ -648,7 +646,7 @@ footer h4 {
   }
 
   #city-choice {
-    width: 240px;
+    width: 200px;
   }
 
   /*filtres*/
@@ -672,6 +670,14 @@ footer h4 {
       vertical-align: middle;
   }
 
+  .choice p:hover {
+  color: #0065fc;
+  background-color: #deebff;
+  transition: 1s;
+  border: #deebff solid 3.5px;
+  border-left: none;
+  }
+  
   /*****************************/
   /*SECTION HEBERGEMENTS*/
   /*******************************/
