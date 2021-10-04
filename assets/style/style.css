@@ -1,21 +1,6 @@
-/*summary*/
-
-/*    fonts     l11 */
-/*    colors    l15 */
-/*    css properties for the entire document  l20 */
-/*    Mobile version  l58 */
-/*    Tablet version  l476  */
-/*    Desktop version l549  */
-
-
 /*fonts*/
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-/*colors
-blue                #0065FC
-light blue          #DEEBFF
-grey                #F2F2F2 */
 
 /*    css properties for the entire document  */
 
@@ -240,7 +225,7 @@ ul li:nth-child(1) {
 }
 
 #information-icon i::before {
-  font-size: 0.8rem;
+  font-size: 13px;
   text-align:center;
 }
 
@@ -556,7 +541,7 @@ footer h4 {
   }
 
   body {
-      font-size:1.3rem;
+      font-size:20px;
   }
   /*header*/
 
@@ -591,7 +576,7 @@ footer h4 {
 
   .menu li {
     border-bottom: none;
-    padding: 1rem 0;
+    padding: 16px 0;
     border-top: transparent 5px solid;
     display: table;
   }
@@ -620,7 +605,7 @@ footer h4 {
   #register {
     position: inherit;
     text-align: center;
-    padding: 1rem 0;
+    padding: 16px 0;
     border-top: transparent 5px solid;
     display: table-cell;
     vertical-align: middle;
@@ -676,11 +661,11 @@ footer h4 {
   }
 
   .choice p:hover {
-  color: #0065fc;
-  background-color: #deebff;
-  transition: 1s;
-  border: #deebff solid 3.5px;
-  border-left: none;
+    color: #0065fc;
+    background-color: #deebff;
+    transition: 1s;
+    border: #deebff solid 3.5px;
+    border-left: none;
   }
   
   /*Accomodation section*/
